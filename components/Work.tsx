@@ -28,19 +28,23 @@ export default function Work() {
     <div className="relative min-h-screen w-full bg-slate-300 dark:bg-gradient-to-b dark:from-slate-800 to-black py-[70px]">
       {selectedImage > -1 && (
         <Modal isOpen={open} setVisibility={setVisibility}>
-          <div className="w-full h-full lg:container lg:max-w-[60vw] max-h-[80vh]  bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-70 backdrop-blur-md  flex flex-col">
-            <div className={"relative w-full h-[70vh] sm:w-[800px]"}>
+          <div className="bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-70 backdrop-blur-md  flex flex-col">
+            <div
+              className={
+                "relative h-[80vh] sm:h-[85vh] w-[90vw]  sm:w-[1000px]"
+              }
+            >
               <Image
                 onClick={() => setZoomed(!zoomed)}
                 className={""}
                 loading="lazy"
-                src={`/images/products/product${selectedImage}.jpg`}
+                src={`/images/products/product${selectedImage}.webp`}
                 alt="item"
                 layout="fill"
                 objectPosition={"center"}
                 objectFit={zoomed ? "cover" : "contain"}
                 placeholder="blur"
-                blurDataURL={`/images/products/product${selectedImage}.jpg`}
+                blurDataURL={`/images/products/product${selectedImage}.webp`}
               />
               <button
                 onClick={() => setZoomed(!zoomed)}
@@ -81,7 +85,7 @@ export default function Work() {
                 )}
               </button>
             </div>
-            <p className="text-black dark:text-white px-10 py-4 text-base font-Montserrat">
+            <p className="w-full text-black dark:text-white px-10 py-4 text-base font-Montserrat">
               LolaDeco&reg; Photos
             </p>
           </div>
@@ -93,7 +97,7 @@ export default function Work() {
         </h1>
         <div className="lg:container h-full  w-full flex items-center overflow-auto ">
           <div className="grid grid-flow-row grid-cols-1 md:grid-cols-3 lg:grid-cols-4   gap-4  mx-auto ">
-            {createArray(57).map((item) => (
+            {createArray(51).map((item) => (
               <div
                 key={item}
                 className={
@@ -108,13 +112,13 @@ export default function Work() {
                     }}
                     className=" object-cover hover:object-contain scale-125  hover:scale-100 lg:grayscale hover:grayscale-0  transition-all duration-500 ease-in-out"
                     loading="lazy"
-                    src={`/images/products/product${item + 1}.jpg`}
+                    src={`/images/products/product${item + 1}.webp`}
                     alt="item"
                     layout="fill"
                     objectPosition={"center"}
                     objectFit="cover"
                     placeholder="empty"
-                    blurDataURL={`/images/products/product${item + 1}.jpg`}
+                    blurDataURL={`/images/products/item${item + 1}.webp`}
                   />
                 </div>
               </div>
