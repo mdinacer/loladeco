@@ -31,7 +31,11 @@ export default function Footer() {
               Email
             </button>
           </Link>
-          <Link href={"#"} passHref>
+          <a
+            rel="noreferrer"
+            target={"_blank"}
+            href={"https://www.facebook.com/profile.php?id=100070601695671"}
+          >
             <button
               type="button"
               className="min-w-[130px] text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-2 mb-2"
@@ -53,9 +57,13 @@ export default function Footer() {
               </svg>
               Facebook
             </button>
-          </Link>
+          </a>
 
-          <Link href={"#"} passHref>
+          <a
+            href={"https://www.instagram.com/"}
+            rel="noreferrer"
+            target={"_blank"}
+          >
             <button
               type="button"
               className=" min-w-[130px] text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-2 mb-2"
@@ -77,7 +85,7 @@ export default function Footer() {
               </svg>
               Instagram
             </button>
-          </Link>
+          </a>
         </div>
       </div>
     </div>
