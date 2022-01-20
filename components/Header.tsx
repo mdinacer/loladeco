@@ -12,7 +12,7 @@ export default function Header() {
   const source = locale === "en" ? headerEn : headerFr;
   return (
     <header>
-      <nav className="fixed w-full text-black dark:text-white bg-opacity-60 dark:bg-opacity-60  flex flex-wrap items-center justify-between px-2 py-1 mb-3  bg-slate-300 dark:bg-slate-800 z-50 drop-shadow-md backdrop-blur-md">
+      <nav className="fixed w-full text-black dark:text-white bg-opacity-60 dark:bg-opacity-60 font-Montserrat  flex flex-wrap items-center justify-between px-2 py-2 mb-3  bg-slate-300 dark:bg-slate-800 z-50 drop-shadow-md backdrop-blur-md">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link href={"/"} locale={"en"} passHref>
@@ -73,12 +73,12 @@ export default function Header() {
             }
             id="example-navbar-danger"
           >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto ">
               <li className="nav-item">
                 <Link href="/" passHref>
                   <a
                     href={"/"}
-                    className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
+                    className=" px-3 py-2 flex items-center text-xs uppercase font-normal hover:font-bold leading-snug hover:opacity-75"
                   >
                     {source.home}
                   </a>
@@ -87,21 +87,21 @@ export default function Header() {
 
               <li className="nav-item">
                 <Link href={"#services"} passHref>
-                  <div className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75">
+                  <a className="px-3 py-2 flex items-center text-xs uppercase font-normal hover:font-bold leading-snug hover:opacity-75">
                     {source.services}
-                  </div>
+                  </a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href={"#work"} passHref>
-                  <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75">
+                  <a className="px-3 py-2 flex items-center text-xs uppercase font-normal hover:font-bold leading-snug hover:opacity-75">
                     {source.work}
                   </a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href={"#contact"} passHref>
-                  <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75">
+                  <a className="px-3 py-2 flex items-center text-xs uppercase font-normal hover:font-bold leading-snug hover:opacity-75">
                     {source.contact}
                   </a>
                 </Link>

@@ -4,26 +4,25 @@ import Services from "../components/Services";
 import Work from "../components/Work";
 
 export default function Home() {
-    return (
-        <div className=" space-y-14 lg:space-y-24">
-            <Head>
-                <title>LolaDeco - Couture</title>
-                <link rel="icon" href={"/favicon.ico"}/>
-                <link rel="manifest" href={"/manifest.json"}/>
-            </Head>
+  return (
+    <div className=" space-y-14 lg:space-y-24">
+      <Head>
+        <title>LolaDeco - Couture</title>
+        <link rel="icon" href={"/favicon.ico"} />
+        <link rel="manifest" href={"/manifest.json"} />
+      </Head>
 
-            <main className="antialiased snap-y snap-mandatory ">
-                <section className="snap-always snap-center">
-                    <Hero/>
-                </section>
-                <section className="snap-always snap-center" id="services">
-                    <Services/>
-                </section>
-
-                <section className="snap-always snap-center" id="work">
-                    <Work/>
-                </section>
-            </main>
-        </div>
-    );
+      <main className="antialiased ">
+        <section>
+          <Hero />
+        </section>
+        <section>
+          <Services />
+        </section>
+        <section>
+          <Work />
+        </section>
+      </main>
+    </div>
+  );
 }

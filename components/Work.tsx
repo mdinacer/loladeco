@@ -4,10 +4,11 @@ import Modal from "./Modal";
 import { useRouter } from "next/router";
 import { workEn } from "../locales/en/en";
 import { workFr } from "../locales/fr/fr";
+import profilePic from "../public/me.png";
 
 export default function Work() {
   const [open, setOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(-1);
+  const [selectedImage, setSelectedImage] = useState<string | null>();
   const [zoomed, setZoomed] = useState(true);
   const { locale } = useRouter();
   const source = locale === "en" ? workEn : workFr;
@@ -15,7 +16,7 @@ export default function Work() {
   const setVisibility = (value: boolean) => {
     setOpen(value);
     if (!value) {
-      setSelectedImage(-1);
+      setSelectedImage(null);
       setZoomed(true);
     }
   };
@@ -26,7 +27,7 @@ export default function Work() {
 
   return (
     <div className="relative min-h-screen w-full bg-slate-300 dark:bg-gradient-to-b dark:from-slate-800 to-black py-[70px]">
-      {selectedImage > -1 && (
+      {selectedImage && (
         <Modal isOpen={open} setVisibility={setVisibility}>
           <div className="bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-70 backdrop-blur-md  flex flex-col">
             <div
@@ -38,13 +39,13 @@ export default function Work() {
                 onClick={() => setZoomed(!zoomed)}
                 className={""}
                 loading="lazy"
-                src={`/images/products/product${selectedImage}.webp`}
+                src={selectedImage}
                 alt="item"
                 layout="fill"
                 objectPosition={"center"}
                 objectFit={zoomed ? "cover" : "contain"}
                 placeholder="blur"
-                blurDataURL={`/images/products/product${selectedImage}.webp`}
+                blurDataURL={selectedImage}
               />
               <button
                 onClick={() => setZoomed(!zoomed)}
@@ -91,39 +92,57 @@ export default function Work() {
           </div>
         </Modal>
       )}
-      <div className="lg:container mx-auto px-5 prose lg:prose-xl">
+      <div className=" mx-auto  prose lg:prose-xl">
         <h1 className="text-slate-900 dark:text-white font-Montserrat leading-10 mx-4">
           {source.title}
         </h1>
-        <div className="lg:container h-full  w-full flex items-center overflow-auto ">
-          <div className="grid grid-flow-row grid-cols-1 md:grid-cols-3 lg:grid-cols-4   gap-4  mx-auto ">
-            {createArray(51).map((item) => (
-              <div
-                key={item}
-                className={
-                  "relative transition-all duration-300 flex items-center h-auto "
-                }
-              >
-                <div className="relative w-80   h-40 rounded-lg shadow-xl hover:shadow-2xl bg-black overflow-hidden">
-                  <Image
-                    onClick={() => {
-                      setSelectedImage(item + 1);
-                      setVisibility(true);
-                    }}
-                    className=" object-cover hover:object-contain scale-125  hover:scale-100 lg:grayscale hover:grayscale-0  transition-all duration-500 ease-in-out"
-                    loading="lazy"
-                    src={`/images/products/product${item + 1}.webp`}
-                    alt="item"
-                    layout="fill"
-                    objectPosition={"center"}
-                    objectFit="cover"
-                    placeholder="empty"
-                    blurDataURL={`/images/products/item${item + 1}.webp`}
-                  />
+        <div className="h-full  w-full flex flex-col items-center overflow-auto  ">
+          {source.items.map(
+            ({ title, imagesCount, path, description }, categoryIndex) => (
+              <div key={categoryIndex} className="">
+                <h2 className="text-slate-900 dark:text-white font-Montserrat">
+                  {title}
+                </h2>
+                {description && (
+                  <div
+                    className={
+                      "text-black dark:text-white text-md text-left font-Montserrat  mb-4"
+                    }
+                  >
+                    {description}
+                  </div>
+                )}
+                <div className="grid grid-flow-row grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto ">
+                  {createArray(imagesCount).map((item) => (
+                    <div
+                      key={item}
+                      className={
+                        "relative transition-all duration-300 flex items-center h-auto mx-auto"
+                      }
+                    >
+                      <div className="relative w-40 h-40 rounded-lg shadow-xl hover:shadow-2xl bg-black overflow-hidden">
+                        <Image
+                          onClick={() => {
+                            setSelectedImage(`${path}image${item + 1}.jpg`);
+                            setVisibility(true);
+                          }}
+                          className=" object-cover hover:object-contain scale-125  hover:scale-100 lg:grayscale hover:grayscale-0  transition-all duration-500 ease-in-out"
+                          loading="lazy"
+                          src={`${path}image${item + 1}.jpg`}
+                          alt="item"
+                          layout="fill"
+                          objectPosition={"center"}
+                          objectFit="cover"
+                          placeholder="blur"
+                          blurDataURL={`${path}image${item + 1}.jpg`}
+                        />
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
-            ))}
-          </div>
+            )
+          )}
         </div>
       </div>
     </div>

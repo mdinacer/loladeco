@@ -1,6 +1,6 @@
 export const heroEn = {
     title: "A permanent portal",
-    subtitle1: "Between",
+    subtitle: "Between a TRADITION of excellence and a MODERN craftsmanship",
     subtitle2: "TRADITION of excellence",
     subtitle3: "MODERN craftsmanship",
     contact: "Contact us",
@@ -9,34 +9,76 @@ export const heroEn = {
 
 export const servicesEn = {
     title: "Our Services",
-    item1: "Custom hand made embroidery",
-    item2: "Everyone has their own taste",
-    item3: "Tailor made",
-    item4: "Kings & Queens",
-    item5: "Princes & Princesses",
-    item6: "Angels",
-    item7: "Sheets & Bed covers",
-    item8: "Pillows & Cushions",
-    item9: "Towels & Napkins",
 
-    itemDesc1: null,
-    itemDesc2:  null,
-    itemDesc3:  null,
-    itemDesc4: null,
-    itemDesc5:null,
-    itemDesc6: null,
-    itemDesc7: null,
-    itemDesc8: null,
-    itemDesc9: null,
+    items: [
+        {
+            title: "Custom hand made embroidery",
+            description: "Drawings, Names, Borders...",
+            image: "/images/services1.jpg",
+        },
+        {
+            title: "Everyone has their own taste",
+            description: "Colors, Types of fabric, Measures, Shapes...",
+            image: "/images/services2.jpg",
+        },
+        {
+            title: "Tailor made",
+            description: "Big or small, round or rectangular...",
+            image: "/images/services3.jpg",
+        },
+        {
+            title: "Sheets & Bed covers",
+            description: "Double or single, sheet, bedspread, duvet cover...",
+            image: "/images/services4.jpg",
+        },
+        {
+            title: "Pillows & Cushions",
+            description: "All types and shapes of pillows and cushions",
+            image: "/images/services5.jpg",
+        },
+        {
+            title: "Towels & Napkins",
+            description: "Personalized tablecloths and napkins in the desired numbers.",
+            image: "/images/services6.jpg",
+        },
+
+    ],
 }
 
-export const headerEn={
-    home:"Home",
-    services:"Our Services",
-    work:"Our Work",
-    contact:"Contact Us",
+export const headerEn = {
+    home: "Home",
+    services: "Our Services",
+    work: "Our Work",
+    contact: "Contact Us",
 }
 
-export const workEn={
+export const workEn = {
     title: "Our Work",
+
+    items: [
+        {
+            title: "Accessories",
+            imagesCount: 4,
+            description: "Accessories for different occasions",
+            path: "/images/products/accessories/"
+        },
+        {
+            title: "Pillows & Cushions",
+            imagesCount: 6,
+            description: "",
+            path: "/images/products/pillows_cushions/"
+        },
+        {
+            title: "Sheets & Bed covers",
+            imagesCount: 24,
+            description: "",
+            path: "/images/products/sheets_bed_covers/"
+        },
+        {
+            title: "Towels & Napkins",
+            imagesCount: 17,
+            description: "",
+            path: "/images/products/towels_napkins/"
+        },
+    ]
 }
