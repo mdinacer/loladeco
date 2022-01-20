@@ -35,13 +35,13 @@ export default function Header() {
                     <path d="m325.745,163.006h49.498c2.761,0 5-2.239 5-5s-2.239-5-5-5h-49.498c-2.761,0-5,2.239-5,5s2.239,5 5,5z" />
                   </g>
                 </svg>
-                <a className=" font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap   text-xl  font-Montserrat leading-none">
+                <a className=" font-bold  inline-block mr-4 py-2 whitespace-nowrap   text-xl  font-Montserrat leading-none">
                   Lola Deco
                 </a>
               </figure>
             </Link>
 
-            <div className={"flex flex-row block lg:hidden items-center"}>
+            <div className={"flex flex-row sm:block lg:hidden items-center"}>
               <ThemeSwitch />
               <LanguageSwitch />
               <button

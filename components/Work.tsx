@@ -126,13 +126,13 @@ export default function Work() {
                             setSelectedImage(`${path}image${item + 1}.jpg`);
                             setVisibility(true);
                           }}
-                          className=" object-cover hover:object-contain scale-125  hover:scale-100 lg:grayscale hover:grayscale-0  transition-all duration-500 ease-in-out"
+                          className=" object-cover hover:object-contain scale-100 sm:scale-110   hover:scale-100 lg:grayscale hover:grayscale-0  transition-all duration-500 ease-in-out"
                           loading="lazy"
                           src={`${path}image${item + 1}.jpg`}
                           alt="item"
                           layout="fill"
                           objectPosition={"center"}
-                          objectFit="cover"
+                          objectFit="fill"
                           placeholder="blur"
                           blurDataURL={`${path}image${item + 1}.jpg`}
                         />
