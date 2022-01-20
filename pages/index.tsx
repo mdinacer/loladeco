@@ -12,14 +12,15 @@ export default function Home() {
         <link rel="manifest" href={"/manifest.json"} />
       </Head>
 
-      <main className="antialiased ">
-        <section>
+      <main>
+        <section className="snap-always snap-center">
           <Hero />
         </section>
-        <section>
+        <section id="services">
           <Services />
         </section>
-        <section>
+
+        <section id="work">
           <Work />
         </section>
       </main>
