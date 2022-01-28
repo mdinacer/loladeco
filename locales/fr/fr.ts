@@ -1,6 +1,6 @@
 export const heroFr = {
     title: "Une passerelle permanente",
-    subtitle: "Entre un TRADITION d’excellence et un savoir-faire MODERNE",
+    subtitle: "Entre une TRADITION d’excellence et un savoir-faire MODERNE",
     subtitle2: "TRADITION d’excellence",
     subtitle3: "Savoir-faire MODERNE",
     contact: "Contactez nous",

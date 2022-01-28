@@ -15,8 +15,9 @@ module.exports = {
       fontFamily: {
         Montserrat: ["Montserrat", "sans-serif"],
         BebasNeue: ["Bebas Neue", "sans-serif"],
-        Cinzel: ["Cinzel", "sans-serif"],
-        Lora: ["Lora", "sans-serif"],
+        GreatVibes: ["Great Vibes", "sans-serif"],
+        Oswald: ["Oswald", "sans-serif"],
+        RobotoC: ["Roboto Condensed", "sans-serif"],
       },
     },
   },

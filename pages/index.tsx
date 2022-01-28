@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <section className="snap-always snap-center">
+        <section>
           <Hero />
         </section>
         <section id="services">
