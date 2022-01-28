@@ -3,12 +3,23 @@ import Image from "next/image";
 export default function Test() {
   return (
     <div className="relative h-full w-full min-h-screen">
-      <div className="absolute top-0 left-0 h-full w-full bg-cover bg-top   bg-[url('/images/products/towels_napkins/image7.jpg')]"></div>
-      <div className="absolute top-0 left-0 h-full w-full mix-blend-multiply opacity-90  bg-gradient-to-br from-[#24A19C]  to-[#325288]"></div>
+      <div className="absolute top-0 left-0 h-[60vh] w-full bg-cover bg-center   bg-[url('https://images.pexels.com/photos/6850456/pexels-photo-6850456.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500')]"></div>
 
-      <div className=" min-h-[50vh] h-full w-full flex justify-center items-center ">
-        <div className=" relative flex items-center justify-center flex-col">
-          <h1 className="text-white  flex flex-col ">
+      <div className="  h-screen w-full flex justify-center items-center ">
+        <video
+          playsInline
+          preload="none"
+          src={
+            "https://vod-progressive.akamaized.net/exp=1643423743~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F620%2F25%2F628100777%2F2895244360.mp4~hmac=adb63bdae3a02a94514dd0bf23b2445c9ba7e7703054dd7abaafd6dd9f95fcce/vimeo-prod-skyfire-std-us/01/620/25/628100777/2895244360.mp4?download=1&filename=pexels-ron-lach-9850291.mp4"
+          }
+          autoPlay
+          loop
+          muted
+          className="absolute top-0 left-0 right-0 bottom-0 w-full  h-screen object-cover object-center"
+        />
+        <div className="absolute top-0 left-0 h-screen w-full mix-blend-multiply opacity-70  bg-gradient-to-b from-[#F05454]  to-black"></div>
+        <div className=" relative flex items-center justify-center flex-col text-white">
+          <h1 className="  flex flex-col ">
             <span className="font-GreatVibes text-9xl translate-y-8 ">
               Lola{" "}
             </span>
@@ -23,9 +34,9 @@ export default function Test() {
         </div>
       </div>
 
-      <div className="relative  min-h-screen h-full w-full py-32">
-        <div className="relative  h-[50vh] w-[80%] bg-[#FFF2F9] mx-auto my-20 rounded-xl drop-shadow-lg bg-opacity-20 backdrop-blur-sm overflow-hidden">
-          <div className=" relative grid grid-cols-1 sm:grid-cols-3 grid-flow-row sm:grid-rows-2 gap-4 py-10 w-full h-full px-20">
+      <div className="relative  min-h-screen h-full w-full py-5 sm:py-20 bg-slate-300 dark:bg-slate-600">
+        <div className="relative  h-full w-[80%] bg-[#F05454] mx-auto my-5 rounded-xl drop-shadow-lg  backdrop-blur-sm overflow-hidden">
+          <div className=" relative grid grid-cols-1 sm:grid-cols-3 grid-flow-row sm:grid-rows-2 gap-4 py-10 w-full h-full px-3 sm:px-20">
             <div className="h-full flex items-center justify-center">
               <div>
                 <h1 className="text-4xl font-Oswald leading-normal">
@@ -101,7 +112,7 @@ export default function Test() {
           </div>
         </div>
 
-        <div className="relative  h-full w-[80%] bg-[#FFF2F9] mx-auto my-20 rounded-xl drop-shadow-lg bg-opacity-20 backdrop-blur-sm overflow-hidden">
+        <div className="relative  h-full w-[80%] bg-[#D6E5FA] text-black mx-auto my-20 rounded-xl drop-shadow-lg  backdrop-blur-sm overflow-hidden">
           <h1 className="text-5xl font-Oswald leading-normal m-10">
             Notre Travail
           </h1>

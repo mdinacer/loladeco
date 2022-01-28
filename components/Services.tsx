@@ -8,7 +8,7 @@ export default function Services() {
   const source = locale === "en" ? servicesEn : servicesFr;
 
   return (
-    <div className=" py-20 relative min-h-screen bg-slate-300 dark:bg-gradient-to-b dark:from-black to-slate-800 ">
+    <div className=" py-20 relative min-h-screen bg-slate-300 dark:bg-gradient-to-b dark:from-slate-900 to-slate-800 ">
       <article className="prose lg:prose-lg  md:container px-5  mx-auto ">
         <h1 className="text-slate-900 dark:text-white font-Montserrat leading-10">
           {source.title}

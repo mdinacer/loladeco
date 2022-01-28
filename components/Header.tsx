@@ -12,7 +12,7 @@ export default function Header() {
   const source = locale === "en" ? headerEn : headerFr;
   return (
     <header>
-      <nav className="fixed w-full text-black dark:text-white bg-opacity-60 dark:bg-opacity-60 font-Montserrat  flex flex-wrap items-center justify-between px-2 py-2 mb-3  bg-slate-300 dark:bg-slate-800 z-50 drop-shadow-md backdrop-blur-md">
+      <nav className="fixed w-full text-black dark:text-white  dark:bg-opacity-40 font-Montserrat  flex flex-wrap items-center justify-between px-2 py-2 mb-3  bg-slate-300 dark:bg-slate-600 bg-opacity-30  z-50 drop-shadow-md backdrop-blur-md">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link href={"/"} locale={"en"} passHref>
@@ -35,8 +35,8 @@ export default function Header() {
                     <path d="m325.745,163.006h49.498c2.761,0 5-2.239 5-5s-2.239-5-5-5h-49.498c-2.761,0-5,2.239-5,5s2.239,5 5,5z" />
                   </g>
                 </svg>
-                <a className=" font-bold  inline-block mr-4 py-2 whitespace-nowrap   text-xl  font-Montserrat leading-none">
-                  Lola Deco
+                <a className=" font-bold  inline-block mr-4 py-2  leading-none">
+                  <span className=" font-GreatVibes text-3xl ">Lola Deco </span>
                 </a>
               </figure>
             </Link>
@@ -73,12 +73,12 @@ export default function Header() {
             }
             id="example-navbar-danger"
           >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto ">
+            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto uppercase font-Oswald text-xl ">
               <li className="nav-item">
                 <Link href="/" passHref>
                   <a
                     href={"/"}
-                    className=" px-3 py-2 flex items-center text-xs uppercase font-normal hover:font-bold leading-snug hover:opacity-75"
+                    className=" px-3 py-2 flex items-center   font-normal hover:font-bold leading-snug hover:opacity-75"
                   >
                     {source.home}
                   </a>
@@ -87,30 +87,30 @@ export default function Header() {
 
               <li className="nav-item">
                 <Link href={"#services"} passHref>
-                  <a className="px-3 py-2 flex items-center text-xs uppercase font-normal hover:font-bold leading-snug hover:opacity-75">
+                  <a className="px-3 py-2 flex items-center  font-normal hover:font-bold leading-snug hover:opacity-75">
                     {source.services}
                   </a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href={"#work"} passHref>
-                  <a className="px-3 py-2 flex items-center text-xs uppercase font-normal hover:font-bold leading-snug hover:opacity-75">
+                  <a className="px-3 py-2 flex items-center  font-normal hover:font-bold leading-snug hover:opacity-75">
                     {source.work}
                   </a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href={"#contact"} passHref>
-                  <a className="px-3 py-2 flex items-center text-xs uppercase font-normal hover:font-bold leading-snug hover:opacity-75">
+                  <a className="px-3 py-2 flex items-center font-normal hover:font-bold leading-snug hover:opacity-75">
                     {source.contact}
                   </a>
                 </Link>
               </li>
 
-              <li className={"hidden lg:block"}>
+              <li className={"hidden lg:block my-auto"}>
                 <ThemeSwitch />
               </li>
-              <li className={"hidden lg:block"}>
+              <li className={"hidden lg:block my-auto"}>
                 <LanguageSwitch />
               </li>
             </ul>

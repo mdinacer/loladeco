@@ -92,27 +92,27 @@ export default function Work() {
           </div>
         </Modal>
       )}
-      <div className=" mx-auto  prose lg:prose-xl">
-        <h1 className="text-slate-900 dark:text-white font-Montserrat leading-10 mx-4">
-          {source.title}
-        </h1>
-        <div className="h-full  w-full flex flex-col items-center overflow-auto  ">
+      <div className=" mx-auto ">
+        <div className="container mx-auto px-5  w-full flex flex-col   ">
+          <h1 className="text-slate-900 dark:text-white  pb-7 text-6xl font-Oswald ">
+            {source.title}
+          </h1>
           {source.items.map(
             ({ title, imagesCount, path, description }, categoryIndex) => (
               <div key={categoryIndex} className="">
-                <h2 className="text-slate-900 dark:text-white font-Montserrat">
+                <h2 className="text-slate-900 dark:text-white text-4xl font-Oswald leading-relaxed ">
                   {title}
                 </h2>
                 {description && (
                   <div
                     className={
-                      "text-black dark:text-white text-md text-left font-Montserrat  mb-4"
+                      "text-black dark:text-white text-md text-left font-RobotoC text-xl font-light  mb-4"
                     }
                   >
                     {description}
                   </div>
                 )}
-                <div className="grid grid-flow-row grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto ">
+                <div className="grid grid-flow-row grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 mx-auto py-10">
                   {createArray(imagesCount).map((item) => (
                     <div
                       key={item}
@@ -120,13 +120,13 @@ export default function Work() {
                         "relative transition-all duration-300 flex items-center h-auto mx-auto"
                       }
                     >
-                      <div className="relative w-40 h-40 rounded-lg shadow-xl hover:shadow-2xl bg-black overflow-hidden">
+                      <div className="relative w-80 h-40 rounded-lg shadow-xl hover:shadow-2xl bg-black overflow-hidden">
                         <Image
                           onClick={() => {
                             setSelectedImage(`${path}image${item + 1}.jpg`);
                             setVisibility(true);
                           }}
-                          className=" object-cover hover:object-contain scale-100 sm:scale-110   hover:scale-100 lg:grayscale hover:grayscale-0  transition-all duration-500 ease-in-out"
+                          className=" object-cover hover:object-contain scale-100 sm:scale-110   hover:scale-100 lg:grayscale-70 hover:grayscale-0  transition-all duration-500 ease-in-out"
                           loading="lazy"
                           src={`${path}image${item + 1}.jpg`}
                           alt="item"
