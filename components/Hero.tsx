@@ -19,6 +19,7 @@ export default function Hero() {
         className="absolute top-0 left-0 right-0 bottom-0 w-full  h-screen object-cover object-center"
       />
       <div className="absolute top-0 left-0 h-screen w-full mix-blend-multiply opacity-70  bg-gradient-to-b from-[#F05454]  to-black"></div>
+      <div className="absolute top-0 left-0 h-screen w-full mix-blend-multiply opacity-30  bg-black"></div>
       <div className=" relative flex items-center justify-center flex-col text-white">
         <h1 className="  flex flex-col ">
           <span className="font-GreatVibes text-9xl translate-y-8 ">Lola </span>
