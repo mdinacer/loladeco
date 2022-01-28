@@ -1,8 +1,5 @@
 export const heroEn = {
-    title: "A permanent portal",
-    subtitle: "Between a TRADITION of excellence and a MODERN craftsmanship",
-    subtitle2: "TRADITION of excellence",
-    subtitle3: "MODERN craftsmanship",
+    title: "A permanent portal between a tradition of excellence and a modern craftsmanship.",
     contact: "Contact us",
     explore: "Our services"
 }
