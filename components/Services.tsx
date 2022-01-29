@@ -29,7 +29,7 @@ export default function Services() {
                   <div className="relative top-0 left-0 right-0 bottom-0 h-[60vh] lg:h-100 w-full flex-none bg-cover">
                     <Image
                       loading="lazy"
-                      src={image ?? "/images/services4.jpg"}
+                      src={image ?? "/images/services4.webp"}
                       alt={title}
                       layout="fill"
                       placeholder="blur"

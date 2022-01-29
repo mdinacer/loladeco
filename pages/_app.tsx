@@ -8,9 +8,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className="scroll-smooth">
       <ThemeProvider attribute="class" enableSystem={false}>
-        <Header />
+        {/* <Header /> */}
         <Component {...pageProps} />
-        <Footer />
+        {/* <Footer /> */}
       </ThemeProvider>
     </div>
   );

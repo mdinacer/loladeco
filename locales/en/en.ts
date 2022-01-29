@@ -11,32 +11,32 @@ export const servicesEn = {
         {
             title: "Custom hand made embroidery",
             description: "Drawings, Names, Borders...",
-            image: "/images/services1.jpg",
+            image: "/images/services1.webp",
         },
         {
             title: "Everyone has their own taste",
             description: "Colors, Types of fabric, Measures, Shapes...",
-            image: "/images/services2.jpg",
+            image: "/images/services2.webp",
         },
         {
             title: "Tailor made",
             description: "Big or small, round or rectangular...",
-            image: "/images/services3.jpg",
+            image: "/images/services3.webp",
         },
         {
             title: "Sheets & Bed covers",
             description: "Double or single, sheet, bedspread, duvet cover...",
-            image: "/images/services4.jpg",
+            image: "/images/services4.webp",
         },
         {
             title: "Pillows & Cushions",
             description: "All types and shapes of pillows and cushions",
-            image: "/images/services5.jpg",
+            image: "/images/services5.webp",
         },
         {
             title: "Towels & Napkins",
             description: "Personalized tablecloths and napkins in the desired numbers.",
-            image: "/images/services6.jpg",
+            image: "/images/services6.webp",
         },
 
     ],
@@ -69,7 +69,7 @@ export const workEn = {
             title: "Sheets & Bed covers",
             imagesCount: 24,
             description: "",
-            path: "/images/products/sheets_bed_covers/"
+            path: "/images/products/sheets_covers/"
         },
         {
             title: "Towels & Napkins",

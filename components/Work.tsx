@@ -81,18 +81,16 @@ export default function Work() {
                       <div className="relative w-80 h-80 rounded-lg shadow-xl hover:shadow-2xl bg-black overflow-hidden">
                         <Image
                           onClick={() => {
-                            setSelectedImage(`${path}image${item + 1}.jpg`);
+                            setSelectedImage(`${path}image${item + 1}.webp`);
                             setVisibility(true);
                           }}
                           className=" object-cover hover:object-contain scale-100 sm:scale-110   hover:scale-100 lg:grayscale-70 hover:grayscale-0  transition-all duration-500 ease-in-out"
                           loading="lazy"
-                          src={`${path}image${item + 1}.jpg`}
+                          src={`${path}image${item + 1}.webp`}
                           alt="item"
                           layout="fill"
                           objectPosition={"center"}
                           objectFit="fill"
-                          placeholder="blur"
-                          blurDataURL={`${path}image${item + 1}.jpg`}
                         />
                       </div>
                     </div>
