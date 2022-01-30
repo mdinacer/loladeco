@@ -1,62 +1,60 @@
 import Image from "next/image";
-import { useRouter } from "next/router";
-import { servicesEn } from "../locales/en/en";
-import { servicesFr } from "../locales/fr/fr";
+
+const items = [
+  {
+    id: 1,
+    title: "Broderie A main",
+    description: "Dessins, Noms, Bordure...",
+    image: "cover1.webp",
+  },
+  {
+    id: 2,
+    title: "A chacun son goût",
+    description: "Couleurs, Types de tissus, Mesures, Formes",
+    image: "cover2.webp",
+  },
+  {
+    id: 3,
+    title: "Sur mesure",
+    description: "Grand ou petit, Rond ou rectangulaire...",
+    image: "cover3.webp",
+  },
+];
 
 export default function Services() {
-  const { locale } = useRouter();
-  const source = locale === "en" ? servicesEn : servicesFr;
-
   return (
-    <div className=" py-20 relative min-h-screen bg-slate-300 dark:bg-gradient-to-b dark:from-slate-900 to-slate-800 ">
-      <article className="prose lg:prose-lg  md:container px-5  mx-auto ">
-        <h1 className="text-slate-900 dark:text-white font-Montserrat leading-10">
-          {source.title}
+    <div className="relative h-auto w-full bg-[#EFDAD7] drop-shadow-lg z-10 pb-10">
+      <div>
+        <h1 className="relative text-7xl font-GreatVibes text-center py-16">
+          Nos Services
         </h1>
-        <div className="lg:container mx-auto px-4 sm:px-20">
-          <div className="  grid grid-cols-1 grid-flow-row lg:grid-cols-2 md:grid-cols-2 xl:grid-cols-3  gap-4 ">
-            {source.items.map(({ title, image, description }, index) => (
-              <div
-                key={index}
-                className=" w-full  lg:flex rounded-lg overflow-hidden drop-shadow-sm hover:drop-shadow-lg transition-all duration-300"
-              >
-                <div
-                  className={
-                    "relative h-[60vh] lg:h-100 w-full flex-none bg-cover  rounded-lg overflow-hidden flex items-end justify-center transition-all duration-300  lg:grayscale-80 hover:grayscale-0  "
-                  }
-                  title={title}
-                >
-                  <div className="relative top-0 left-0 right-0 bottom-0 h-[60vh] lg:h-100 w-full flex-none bg-cover">
-                    <Image
-                      loading="lazy"
-                      src={image ?? "/images/services4.webp"}
-                      alt={title}
-                      layout="fill"
-                      placeholder="blur"
-                      blurDataURL={image}
-                      className=" object-cover object-bottom"
-                    />
-                  </div>
-                  <div className=" absolute bottom-0 left-0 h-auto w-full pt-8  p-4  flex flex-col justify-center items-start  bg-slate-200 dark:bg-slate-900 bg-opacity-50 dark:bg-opacity-80 backdrop-blur-md  ">
-                    <div className="text-slate-900 dark:text-white font-normal  font-BebasNeue text-3xl leading-tight ">
-                      {title}
-                    </div>
-                    {description && (
-                      <div
-                        className={
-                          "text-black dark:text-white text-md text-left   font-Montserrat leading-tight "
-                        }
-                      >
-                        {description}
-                      </div>
-                    )}
-                  </div>
-                </div>
+        <div className="relative grid grid-flow-row sm:grid-rows-1 grid-cols-1 sm:grid-cols-3 gap-5">
+          {items.map((item) => (
+            <div
+              key={item.id}
+              className="relative h-[50vh] w-full max-w-sm mx-auto bg-[#EDCDBB] shadow-inner shadow-[#c5aa9b] rounded-t-full  overflow-hidden"
+            >
+              <div className="relative w-full h-[75%]">
+                <Image
+                  src={`/images/${item.image}`}
+                  alt="service1"
+                  objectFit="cover"
+                  objectPosition={"left bottom"}
+                  layout="fill"
+                />
               </div>
-            ))}
-          </div>
+              <div className="relative w-full h-auto font-RobotoC flex flex-col justify-center items-center">
+                <h2 className="text-4xl font-Oswald text-center my-3">
+                  {item.title}
+                </h2>
+                <p className="font-RobotoC text-xl font-light mx-auto px-3">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
-      </article>
+      </div>
     </div>
   );
 }
