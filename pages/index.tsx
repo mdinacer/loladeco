@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className=" space-y-14 lg:space-y-24">
+    <div className=" space-y-14 lg:space-y-24 text-black">
       <Head>
         <title>LolaDeco - Couture</title>
         <link rel="icon" href={"/favicon.ico"} />
@@ -179,7 +179,7 @@ export default function Home() {
 
           <div className="relative h-[50vh] w-full  bg-[#EFDAD7] flex items-start justify-center drop-shadow-md">
             <div className="absolute top-0 left-0 h-full w-full bg-cover opacity-70 bg-fixed bg-[url('https://images.pexels.com/photos/4614107/pexels-photo-4614107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')]" />
-            <div className="relative w-full max-w-lg h-[40vh] bg-[#EDCDBB] rounded-b-full  shadow-[#ceb1a0] flex flex-col items-center justify-center drop-shadow-lg">
+            <div className="relative w-full max-w-lg h-full sm:h-[40vh] bg-[#EDCDBB] rounded-none sm:rounded-b-full  shadow-[#ceb1a0] flex flex-col items-center justify-center drop-shadow-lg">
               <div className=" w-full h-auto mx-auto pt-0">
                 <h2 className=" font-GreatVibes text-6xl leading-relaxed mx-auto w-full text-center">
                   Placer une commande
