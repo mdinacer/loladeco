@@ -14,6 +14,16 @@ export default function Home() {
         <title>LolaDeco - Couture</title>
         <link rel="icon" href={"/favicon.ico"} />
         <link rel="manifest" href={"/manifest.json"} />
+        <meta property="og:title" content="LolaDeco - Couture" />
+        <meta
+          property="og:description"
+          content="LolaDeco - Couture, Seamstress Portfolio"
+        />
+        <meta
+          property="og:image"
+          content="
+          /preview.jpg"
+        />
       </Head>
 
       <main>
